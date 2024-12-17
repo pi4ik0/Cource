@@ -1,9 +1,10 @@
 import sys
 import json
 import requests
-
+from style_task import *
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLabel, QFileDialog, QMessageBox
 from requests import RequestException
+
 
 API_URL = "https://dummyjson.com/products"
 
@@ -82,6 +83,7 @@ class App(QWidget):
 def main():
 	app = QApplication([])
 	dummy = App()
+	app.setStyleSheet(btn)
 
 	sys.exit(app.exec_())
 
